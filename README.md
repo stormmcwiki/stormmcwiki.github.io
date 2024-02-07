@@ -1,1 +1,1 @@
-# WitherNW.github.io
+# WitherSMP's github account
