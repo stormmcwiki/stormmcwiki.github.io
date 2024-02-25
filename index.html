@@ -1,91 +1,140 @@
 <!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
-    <link rel="stylesheet" href="style.css">
-    <title>WitherSMP Database</title>
-</head>
-
-<body>
-
-    <nav>
-        <div class="nav-logo">
-            <a href="">
-                <img src="logo.png">
-            </a>
-        </div>
-
-        <ul class="nav-links">
-            <li class="link"><a href="#">Home</a></li>
-            <li id="link1" class="link"><a href="#">Ranks</a></li>
-            <li id="link2" class="link"><a href="#">Features</a></li>
-            <li id="link3" class="link"><a href="#">Socials</a></li>
-        </ul>
-        <button class="btn">Discord</button>
-    </nav>
-
-    <header class="container">
-        <div class="content">
-            <span class="blur"></span>
-            <span class="blur"></span>
-            <H1>Hi, I'm <span>Sahara</span>, WitherSMP Developer</H1>
-            <p>
-                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Repellendus rem eos aliquid quo rerum
-                temporibus ipsum distinctio numquam ut omnis placeat, nam sint atque quos dolorem laborum? Rerum, esse
-                dolorem.
-            </p>
-            <button class="btn">Get Started</button>
-        </div>
-        <div class="image">
-            <img src="header.png">
-        </div>
-    </header>
-
-    <footer class="container">
-        <span class="blur"></span>
-        <span class="blur"></span>
-        <div class="column">
-            <div class="logo">
-                <img src="logo.png">
-            </div>
-            <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            </p>
-            <div class="socials">
-                <a href="#"><i class="ri-youtube-line"></i></a>
-                <a href="#"><i class="ri-instagram-line"></i></a>
-                <a href="#"><i class="ri-twitter-line"></i></a>
+<html>
+    <head>
+        <link rel="icon" type="images/" href="images/header.png">
+        <title>StormMC Season 2</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/3.5.0/remixicon.min.css">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <header>
+            <a href="" class="logo">Storm MC</a>
+            <nav>
+                <ul class="nav__links">
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Guides</a></li>
+                    <li><a href="#">Shop</a></li>
+                </ul>
+            </nav>
+            <div onclick="scrollToBottom()" class="cta" href="#">Socials</div>
+            <p class="menu cta">Menu</p>
+        </header>
+        <div id="mobile__menu" class="overlay">
+            <a class="close">&times;</a>
+            <div class="overlay__content">
+                <a href="#">About</a>
+                <a href="#">Guides</a>
+                <a href="#">Shop</a>
+                <a onclick="scrollToBottom()" class="ctal" href="#">Socials</a>
             </div>
         </div>
-        <div class="column">
-            <h4>Company</h4>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
+        <section class="container">
+            <h2 class="header">About Us</h2>
+            <div class="features">
+                <div class="card">
+                    <span><i class="ri-shake-hands-line"></i></span>
+                    <h4>Friendly Community</h4>
+                    <p>
+                        Our Official Discord Server Is a fun and friendly community for you and your friends to stay on with others and have a chat with them!
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-bug-line"></i></span>
+                    <h4>Customer Support</h4>
+                    <p>
+                        Tickets and Reporting are types of ways to give notice to bugs, exploiters or rules that players have broken.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-history-line"></i></span>
+                    <h4>On Time Updates</h4>
+                    <p>
+                        We have some updates to give for more experience, exploring, new items like armor and tools and weapons to fight and gain more power within the server!
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-shield-user-fill"></i></i></span>
+                    <h4>Guilds/Teams</h4>
+                    <p>
+                        We give players a chance to work together and have a chance to fight with teams for better chance at winning or teams to gather for supplies, and do have different roles!
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-article-line"></i></span>
+                    <h4>Suggestions</h4>
+                    <p>
+                        Players can suggest and give more useful stuff to players for more items to add within the servers!
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-landscape-line"></i></span>
+                    <h4>Biomes</h4>
+                    <p>
+                        We created custom large biomes for players to play on large surface and give them more land to explore.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-user-settings-fill"></i></span>
+                    <h4>Classes</h4>
+                    <p>
+                        Players can choose between classess for more RPG style fighting and custom keybinds for easy access of it.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-gamepad-fill"></i></span>
+                    <h4>Bossess</h4>
+                    <p>
+                        You can fight bosses which gives more fun in RPG fighting and team up to beat it.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-hourglass-fill"></i></span>
+                    <h4>Rankups</h4>
+                    <p>
+                        We allow playeers to rankup freely but with some cooldown for players to geet known by their playtime.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-wechat-line"></i></span>
+                    <h4>Discord-MC Chatting</h4>
+                    <p>
+                        We made that discord users can talk within the players in side the minecraft server.
+                    </p>
+                </div>
+                <div class="card">
+                    <span><i class="ri-sword-fill"></i></span>
+                    <h4>PVP Style</h4>
+                    <p>
+                        We allow players to pvp using classes and custom items for more fun and more efficient teamfight with enemies.
+                    </p>
+                </div>            
+                <div class="card">
+                    <span><i class="ri-git-repository-line"></i></span>
+                    <h4>Custom Enchants</h4>
+                    <p>
+                        Custom Enchants is more efficient for extra uses for tools, equipments, armors, and supports custom items!
+                    </p>
+                </div>  
+            </div>
+        </section>
+        <footer class="container" id="container">
+            <div class="column">
+                <h4>Socials</h4>
+                <a href="https://discord.gg/stormmc"><i class="ri-discord-fill"></i> Discord</a>
+            </div>
+            <div class="column">
+                <h4>Web Owners</h4>
+                <div class="title" data-tooltip="FOUNDER">SKAD     </div>
+                <div class="title" data-tooltip="WEB MAKER">######     </div>
+                <div class="title" data-tooltip="ADMINISTRATOR">OOG     </div>
+            </div>
+        </footer>
+    
+        <div class="copyright">
+            Copyright © 2024 Storm MC. All Rights Reserved.
         </div>
-        <div class="column">
-            <h4>About Us</h4>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
-        </div>
-        <div class="column">
-            <h4>Contact</h4>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
-            <a href="#">Lorem ipsum</a>
-        </div>
-    </footer>
-
-    <div class="copyright">
-        Lorem ipsum
-    </div>
-
-
-    <script src="script.js"></script>
-</body>
-
+        <script type="text/javascript" src="mobile.js"></script>
+    </body>
 </html>
