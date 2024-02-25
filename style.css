@@ -1,183 +1,254 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
 
-*{
-    padding: 0;
-    margin: 0;
-    outline: none;
-    border: none;
+:root {
+    --lgreen: #4d9559;
+    --mgreen: #38703d;
+    --dgreen: #133917;
+    --blur: rgba(50, 71, 52, 0.5);
+  }
+
+* {
     box-sizing: border-box;
-}
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+  }
 
-img{
-    width: 100%;
+  body {
+    min-height: 100vh;
+    background: linear-gradient(190.59deg, #4d9559 0%, #38703d 28.53%, #133917 75.52%);
+  }
+
+  body::-webkit-scrollbar {
+    width: 0px;
+  }
+
+
+
+  header {
     display: flex;
-}
-
-a{
-    text-decoration: none;
-}
-
-body{
-    font-family: 'Poppins', sans-serif;
-    background-color: #18181B;
-}
-
-nav{
-    max-width: 1200px;
-    margin: auto;
-    padding: 2rem 1rem;
-    display: flex;
+    justify-content: flex-end;
     align-items: center;
-    justify-content: space-between;
-    gap: 2rem;
-}
+    padding: 30px 10%;
+    backdrop-filter: blur(10px);
+    background-color: rgba(50, 71, 52, 0.3);
+  }
 
-.nav-logo{
-    max-width: 400px;
-}
+  .logo {
+    margin-right: auto;
+    font-family: "Poppins", sans-serif;
+    color: #fff;
+    font-weight: 700;
+    text-decoration: none;
+    font-size: 2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
 
-.nav-links{
+  .logo:hover {
+    color: #85d192;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links {
     list-style: none;
     display: flex;
-    align-items: center;
-    gap: 3rem;
-}
-
-.link a{
-    position: relative;
-    padding-bottom: 0.75rem;
-    color: #fff;
-}
-
-.link a::after{
-    content: "";
-    position: absolute;
-    height: 2px;
-    width: 0;
-    bottom: 0;
-    left: 0;
-    background-color: #1d4ed8;
-    transition: all 0.3s ease;
-}
-
-.link a:hover::after{
-    width: 70%;
-}
-
-.btn{
-    padding: 1rem 2rem;
-    font-size: 1rem;
-    color: #fff;
-    background-color: #1d4ed8;
-    border-radius: 5px;
+  }
+  
+  .nav__links a,
+  .cta,
+  .overlay__content a {
+    font-family: "Poppins", sans-serif;
+    font-weight: 500;
+    color: #edf0f1;
+    text-decoration: none;
+  }
+  
+  .nav__links li {
+    padding: 0px 20px;
+  }
+  
+  .nav__links li a {
+    transition: all 0.3s ease 0s;
+  }
+  
+  .nav__links li a:hover {
+    color: #4d9559;
+  }
+  
+  .cta {
+    margin-left: 20px;
+    padding: 9px 25px;
+    background-color: rgba(77, 149, 89, 1);
+    border: none;
+    border-radius: 50px;
     cursor: pointer;
-    transition: all 0.3s ease;
-}
+    transition: all 0.3s ease 0s;
+    font-size: auto;
+  }
+  
+  .cta:hover {
+    background-color: rgba(77, 149, 89, 0.5);
+  }
+  
+  /* Mobile Nav */
+  
+  .menu {
+    display: none;
+  }
+  
+  .overlay {
+    height: 100%;
+    width: 0;
+    position: absolute;
+    z-index: 1;
+    left: auto;
+    top: 0;
+    right: 0;
+    backdrop-filter: blur(50px);
+    background-color: rgba(19, 57, 23, 0.3);
+    overflow-x: hidden;
+    transition: all 0.5s ease 0s;
+  }
+  
+  .overlay--active {
+    width: 35%;
+  }
+  
+  .overlay__content {
+    display: flex;
+    height: 80%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .overlay a {
+    padding: 15px;
+    font-size: 26px;
+    display: block;
+    transition: all 0.3s ease 0s;
+  }
+  
+  .overlay a:hover,
+  .overlay a:focus {
+    color: var(--lgreen);
+  }
+  .overlay .close {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+    color: #edf0f1;
+    cursor: pointer;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+      font-size: 20px;
+    }
+    .overlay .close {
+      font-size: 40px;
+      top: 15px;
+      right: 35px;
+    }
+  }
+  
+  @media only screen and (max-width: 800px) {
+    .nav__links,
+    .cta {
+      display: none;
+    }
+    .menu {
+      display: initial;
+    }
+  }
+  
 
-.btn:hover{
-    background-color: #1e40af;
-}
-
-.container{
+  .container{
     max-width: 1200px;
     margin: auto;
     padding: 5rem 2rem;
-}
+  }
 
-header{
-    position: relative;
-    padding-top: 2rem;
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    align-items: center;
-    gap: 2rem;
-}
-
-header .content h4{
-    margin-bottom: 1rem;
-    color: #ccc;
-    font-size: 1rem;
-    font-weight: 600;
-}
-
-header .content h1{
-    color: #fff;
-    margin-bottom: 1rem;
-    font-size: 3rem;
-    font-weight: 700;
-    line-height: 4rem;
-}
-
-header .content h1 span{
-    -webkit-text-fill-color: transparent;
-    -webkit-text-stroke: 1px #fff;
-}
-
-header .content p{
-    margin-bottom: 2rem;
-    color: #ccc;
-}
-
-header .image{
-    position: relative;
-}
-
-header .image img{
-    max-width: 600px;
-    margin: auto;
-}
-
-section .header{
+  section .header{
     margin-bottom: 1rem;
     color: #fff;
     text-align: center;
     font-size: 2.25rem;
     font-weight: 600;
-}
+    font-family: "Poppins", sans-serif;
+  }
 
-.sub-header{
-    max-width: 600px;
-    margin: auto;
-    text-align: center;
+  .features{
+    margin-top: 4rem;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+  }
+
+  .features .card{
+    backdrop-filter: blur(50px);
+    background-color: var(--blur);
+    padding: 1rem;
+    border: 2px solid transparent;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+    font-family: "Poppins", sans-serif;
+  }
+
+  .features .card:hover{
+    background-color: rgba(77, 149, 89, 0.3);
+    border-color: rgba(77, 149, 89, 0.3);
+  }
+
+  .features .card span{
+    display: inline-block;
+    background-color: var(--lgreen);
+    padding: 2px 9px;
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: #ffffff;
+    border-radius: 5px;
+  }
+
+ .features .card h4{
+    margin-bottom: 0.5rem;
+    color: #fff;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+
+  .features .card p{
     color: #ccc;
-}
+    margin-bottom: 1rem;
+  }
 
-footer{
+  .features .card a{
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+
+ .features .card a:hover{
+    color: var(--lgreen);
+  }
+
+  footer{
     position: relative;
     display: grid;
-    grid-template-columns: 400px repeat(3, 1fr);
-    gap: 2rem;
-}
-
-footer .column .logo{
-    max-width: 100px;
-    margin-bottom: 2rem;
+    grid-template-columns: 200px repeat(2, 1fr);
+    gap: 3rem;
+    font-family: "Poppins", sans-serif;
 }
 
 footer .column p{
     color: #ccc;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
 }
 
-footer .column .socials{
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-}
-
-footer .column .socials a{
-    color: #ccc;
-    border: 1px solid #ccc;
-    padding: 5px 10px;
-    font-size: 1.25rem;
-    border-radius: 100%;
-    transition: all 0.3s ease;
-}
-
-footer .column .socials a:hover{
-    color: #fff;
-    background-color: #1d4ed8;
-    border-color: #1d4ed8;
+footer .column div{
+  color: #ccc;
+  margin-bottom: 1rem;
 }
 
 footer .column h4{
@@ -195,7 +266,21 @@ footer .column > a{
 }
 
 footer .column > a:hover{
-    color: #1d4ed8;
+    color: var(--lgreen);
+}
+
+footer .column .title:hover::after {
+  margin: auto;
+  display: inline-block;
+  content: attr(data-tooltip);
+  backdrop-filter: blur(50px);
+  background-color: var(--blur);
+  padding: .1rem;
+  border: 1px solid transparent;
+  border-radius: 5px;
+  transition: 0.3s ease;
+  font-family: "Poppins", sans-serif;
+  font-weight: 500;
 }
 
 .copyright{
@@ -205,6 +290,7 @@ footer .column > a:hover{
     color: #fff;
     font-size: 0.8rem;
     text-align: center;
+    font-family: "Poppins", sans-serif;
 }
 
 @media (width < 900px){
@@ -220,19 +306,29 @@ footer .column > a:hover{
     .features{
         grid-template-columns: repeat(2, 1fr);
     }
-    .pricing{
-        grid-template-columns: repeat(2, 1fr);
-    }
     footer{
+        grid-template-columns: 1fr 200px;
+    }
+
+    footer .column .title{
         grid-template-columns: 1fr 200px;
     }
 }
 
-@media (width < 600px){
-    header .image::before{
-        display: none;
+  @media (width < 900px){
+    .features{
+        grid-template-columns: repeat(2, 1fr);
+    }
+    .pricing{
+        grid-template-columns: repeat(2, 1fr);
     }
 
+    footer{
+      grid-template-columns: 1fr 200px;
+  }
+  }
+
+  @media (width < 600px){
     .features{
         grid-template-columns: repeat(1, 1fr);
     }
@@ -242,6 +338,6 @@ footer .column > a:hover{
     }
 
     footer{
-        grid-template-columns: 1fr 150px;
-    }
-}
+      grid-template-columns: 1fr 150px;
+  }
+  }
