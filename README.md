@@ -1,1 +1,1 @@
-# WitherSMP's github account
+# STORM MC's OPEN DIRECTORY FOR THE WEBSITE!
